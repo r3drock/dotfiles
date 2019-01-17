@@ -1,0 +1,6 @@
+[options]
+font = Source Code Pro 14
+font = Monospace 14
+[colors]
+foreground = #afafaf
+background = #333333
