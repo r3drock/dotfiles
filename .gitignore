@@ -1,11 +1,17 @@
-*
+#ignore everything
+/*
+#allow some files
+!.gitignore
 !.bash_profile
 !.bashrc
-!.config/alacritty/alacritty.yml
-!.config/alias/.alias
-!.config/i3
-!.config/kitty/kitty.conf
-!.config/termite/config
 !.pam_environment
 !.profile
 !README.md
+
+#allow some files in subdirectories
+#!/.config
+#/.config/*
+#!/.config/systemd/user/ssh-agent.service
+
+
+#allow some directories
