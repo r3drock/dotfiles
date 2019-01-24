@@ -9,9 +9,31 @@
 !README.md
 
 #allow some files in subdirectories
-#!/.config
-#/.config/*
-#!/.config/systemd/user/ssh-agent.service
+!/.config/
+.config/*
+!/.config/alacritty/
+.config/alacritty/*
+!/.config/alacritty/alacritty.yml
+!/.config/alias/
+.config/alias/*
+!/.config/alias/alias
 
+!/.config/fontconfig/
+.config/fontconfig/*
+!/.config/fontconfig/fonts.conf
+
+!/.config/i3/
+
+!/.config/i3status/
+.config/i3status/*
+!/.config/i3status/config
+
+!/.config/termite/
+.config/termite
+!/.config/termite/config
+
+!/.config/kitty/
+.config/kitty
+!/.config/kitty/kitty.conf
 
 #allow some directories
