@@ -29,11 +29,16 @@
 !/.config/i3status/config
 
 !/.config/termite/
-.config/termite
+.config/termite/*
 !/.config/termite/config
 
 !/.config/kitty/
-.config/kitty
+.config/kitty/*
 !/.config/kitty/kitty.conf
 
-#allow some directories
+!/.config/systemd/
+.config/systemd/*
+!/.config/systemd/user
+.config/systemd/user/*
+!/.config/systemd/user/ssh-agent.service
+
