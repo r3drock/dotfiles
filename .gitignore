@@ -1,0 +1,11 @@
+*
+!.bash_profile
+!.bashrc
+!.config/alacritty/alacritty.yml
+!.config/alias/.alias
+!.config/i3
+!.config/kitty/kitty.conf
+!.config/termite/config
+!.pam_environment
+!.profile
+!README.md
