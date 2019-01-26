@@ -95,8 +95,10 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-if [ -f ~/.config/alias/.alias ]; then
-	~/.config/alias/.alias
+if [ -f ~/.config/alias/alias ]; then
+	source ~/.config/alias/alias
+else
+	echo ~/.config/alias/alias is not existent.
 fi
 
 xhost +local:root > /dev/null 2>&1
