@@ -6,4 +6,7 @@ export BROWSER=$HOME/.firefox/firefox
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/nextcloud/scripts:$PATH:/home/r3drock/.local/share/OpenPuff_release"
-setxkbmap -option caps:swapescape
+
+if [ -f ~/.switchcapslockandescape ]; then
+	setxkbmap -option caps:swapescape
+fi

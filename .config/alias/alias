@@ -2,15 +2,15 @@ alias f="fff"
 
 #Use this for when the boss comes around to look busy.
 alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'" 
-# Find out what is taking so much space on your drives
-alias diskspace="du -S | sort -n -r | less"
+#fix x3 with steam
+alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
 # edit configs
 c() {
   case $1 in
-  a)              $EDITOR ~/.alias ;;
+  a)              $EDITOR ~/.config/alias/alias ;;
   apache)    sudo $EDITOR /etc/apache2/apache2.conf ;;
   b)              $EDITOR ~/.bashrc ;;
-  beet)           $EDITOR ~/.config/beets/config.yaml ;;
+  bp)             $EDITOR ~/.bash_profile ;;
   c)              $EDITOR ~/.cvimrc ;;
   clerk)          $EDITOR ~/.config/clerk/config ;;
   compton)        $EDITOR ~/.config/compton/compton.conf ;;
@@ -21,12 +21,8 @@ c() {
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
-  gmail)          $EDITOR ~/.mutt/accounts/gmail ;;
-  gvim)           $EDITOR ~/.gvimrc ;;
   i3)             $EDITOR ~/.i3/config ;;
-  i3b0)           $EDITOR ~/.i3blocks0.conf ;;
-  i3b1)           $EDITOR ~/.i3blocks1.conf ;;
-  h)              $EDITOR ~/.zhist ;;
+  h)              $EDITOR ~/.bash_history ;;
   keynav)         $EDITOR ~/.keynavrc ;;
   ml)             $EDITOR /etc/pacman.d/mirrorlist ;;
   mpd)            $EDITOR ~/.mpd/mpd.conf ;;
@@ -39,7 +35,7 @@ c() {
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
   ncmpcpp)        $EDITOR ~/.ncmpcpp/config ;;
   n)              $EDITOR ~/.local/share/Metanet/N++/keys.vars ;;
-  p)         sudo $EDITOR /etc/pacman.conf ;;
+  p)         	  $EDITOR ~/.profile ;;
   pcol)           $EDITOR ~/.pentadactyl/colors/krompus.penta ;;
   php)       sudo $EDITOR /etc/php5/apache2/php.ini ;;
   qb)             $EDITOR ~/.config/qutebrowser/qutebrowser.conf ;;
