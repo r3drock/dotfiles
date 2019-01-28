@@ -1,6 +1,6 @@
 [options]
-font = Source Code Pro 14
-font = Monospace 14
+font = Fira-Code 13
+font = Monospace 13
 [colors]
 foreground = #afafaf
 background = #333333

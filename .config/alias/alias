@@ -8,61 +8,33 @@ alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
 c() {
   case $1 in
   a)              $EDITOR ~/.config/alias/alias ;;
-  apache)    sudo $EDITOR /etc/apache2/apache2.conf ;;
   b)              $EDITOR ~/.bashrc ;;
   bp)             $EDITOR ~/.bash_profile ;;
-  c)              $EDITOR ~/.cvimrc ;;
-  clerk)          $EDITOR ~/.config/clerk/config ;;
-  compton)        $EDITOR ~/.config/compton/compton.conf ;;
-  crawl)          $EDITOR ~/.crawl/init.txt ;;
-  cs)             $EDITOR ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo/cfg/autoexec.cfg ;;
-  nade)           $EDITOR ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo/cfg/nadepractice.cfg ;;
   def)            $EDITOR ~/.config/mimeapps.list ;;
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
   i3)             $EDITOR ~/.i3/config ;;
   h)              $EDITOR ~/.bash_history ;;
-  keynav)         $EDITOR ~/.keynavrc ;;
-  ml)             $EDITOR /etc/pacman.d/mirrorlist ;;
-  mpd)            $EDITOR ~/.mpd/mpd.conf ;;
-  mpv)            $EDITOR ~/.config/mpv/config ;;
-  mpvi)           $EDITOR ~/.config/mpv/input.conf ;;
-  mute)           $EDITOR ~/bin/gamemute ;;
-  murmur)    sudo $EDITOR /etc/murmur.ini ;;
-  mutt)           $EDITOR ~/.mutt/muttrc ;;
-  riseup)         $EDITOR ~/.mutt/accounts/riseup ;;
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
-  ncmpcpp)        $EDITOR ~/.ncmpcpp/config ;;
-  n)              $EDITOR ~/.local/share/Metanet/N++/keys.vars ;;
   p)         	  $EDITOR ~/.profile ;;
-  pcol)           $EDITOR ~/.pentadactyl/colors/krompus.penta ;;
-  php)       sudo $EDITOR /etc/php5/apache2/php.ini ;;
-  qb)             $EDITOR ~/.config/qutebrowser/qutebrowser.conf ;;
-  qk)             $EDITOR ~/.config/qutebrowser/keys.conf ;;
-  r)              $EDITOR ~/.config/ranger/rc.conf ;;
-  rcom)           $EDITOR ~/.config/ranger/commands.py ;;
-  rifle)          $EDITOR ~/.config/ranger/rifle.conf ;;
-  rtv)            $EDITOR ~/.config/rtv/rtv.cfg ;;
-  scope)          $EDITOR ~/.config/ranger/scope.sh ;;
-  s)              $EDITOR ~/.config/Spotify-AdKiller/Spotify-AdKiller.cfg ;;
-  spotify)        $EDITOR ~/.config/Spotify-AdKiller/Spotify-AdKiller.cfg ;;
-  sub)       sudo $EDITOR ~/bin/AndromedaScript-Linux-3.2/start_andromeda.sh ;;
   sxhkd)          $EDITOR ~/.config/sxhkd/sxhkdrc ;;
   sxiv)           $EDITOR ~/.config/sxiv/exec/key-handler ;;
   t)              $EDITOR ~/.config/termite/config ;;
   tmux)           $EDITOR ~/.tmux.conf ;;
-  tr)             $EDITOR ~/.config/transmission-daemon/settings.json ;;
-  tremc)          $EDITOR ~/.config/tremc/settings.cfg ;;
   v)              $EDITOR ~/.vimrc ;;
-  vcol)           $EDITOR ~/.vim/colors/nompus.vim ;;
-  weechat)        $EDITOR ~/.weechat/weechat.conf ;;
-  wp)             $EDITOR ~/.wallpaperd.cfg ;;
   xinit)          $EDITOR ~/.xinitrc ;;
   xres)           $EDITOR ~/.Xresources && xrdb ~/.Xresources ;;
-  yt)             $EDITOR ~/.config/youtube-dl/config ;;
-  zathura)        $EDITOR ~/.config/zathura/zathurarc ;;
-  z)              $EDITOR ~/.zshrc ;;
   *)              echo "Unknown application: $1" ;;
+  esac
+}
+g() {
+  case $1 in
+  a)		git add $2 ;;
+  s)		git status ;;
+  c)		git commit ;;
+  push)    	git push ;;
+  pull)         git pull ;;
+  *)		echo "no shortcut present for this git command: $1" ;;
   esac
 }
