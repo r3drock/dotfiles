@@ -37,7 +37,10 @@ g() {
   s)		git status ;;
   c)		git commit ;;
   push)    	git push ;;
-  pull)         git pull ;;
+  pull)		git pull ;;
+  email)	git config user.email ;;
+  name)		git config user.name ;;
+  user)		git config user.name ;;
   *)		echo "no shortcut present for this git command: $1" ;;
   esac
 }
