@@ -25,8 +25,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-Plugin 'Valloric/YouCompleteMe'
-" YouCompleteMe
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'junegunn/seoul256.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,9 +50,32 @@ filetype plugin indent on    " required
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
+" airline configuration
+set laststatus=2
+let g:airline#extensions#whitespace#enabled = 0 " disable whitespace checks
+let g:airline_theme = 'murmur'
+
+"linenumbers
 set number
+set numberwidth=4
+
+"linewrap
+set wrap 
+
+" use system clipboard
 set clipboard=unnamedplus
+
+" leave system clipboard unchanged upon closing vim
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
+
+"Close window if last active window is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"automatically close NerdTree when you open a file
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+map <C-n> :NERDTreeToggle<CR>
 map <F2> :w<cr>
 map <F3> :!cargo check<cr>
 map <F4> :!cargo run<cr>
@@ -56,6 +83,19 @@ map <F5> :!cargo build<cr><cr>
 map <F7> bPldw
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
-set exrc
+set mouse=
 set secure
 syntax on
+set tabstop=4
+set autoindent
+set incsearch
+set softtabstop=4
+set shiftwidth=4
+"do not replace tabs with spaces
+set noexpandtab 
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=darkgray
+
+let g:seoul256_background = 235
+colo seoul256

@@ -4,6 +4,7 @@ alias f="fff"
 alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'" 
 #fix x3 with steam
 alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
+
 # edit configs
 c() {
   case $1 in
@@ -14,7 +15,7 @@ c() {
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
-  i3)             $EDITOR ~/.i3/config ;;
+  i3)             $EDITOR ~/.config/i3/config ;;
   h)              $EDITOR ~/.bash_history ;;
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
   p)         	  $EDITOR ~/.profile ;;
@@ -28,13 +29,37 @@ c() {
   *)              echo "Unknown application: $1" ;;
   esac
 }
+
+#git shortcuts 
 g() {
   case $1 in
-  a)		git add $2 ;;
+  a)		git add -v $2 ;;
   s)		git status ;;
   c)		git commit ;;
   push)    	git push ;;
   pull)         git pull ;;
   *)		echo "no shortcut present for this git command: $1" ;;
   esac
+}
+
+# ex - archive extractor
+ex() {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
 }
