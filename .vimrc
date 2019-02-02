@@ -25,6 +25,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+Plugin 'tjdevries/overlength.vim'
+Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -40,9 +43,11 @@ filetype plugin indent on    " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginInstall    - installs plugins; append `!` to update 
+" :PluginUpdate		- updates plugins;
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginClean      - confirms removal of unused plugins; 
+" append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -69,7 +74,7 @@ set clipboard=unnamedplus
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 "Close window if last active window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")&& b:NERDTree.isTabTree()) | q | endif
 "automatically close NerdTree when you open a file
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
@@ -94,8 +99,10 @@ set shiftwidth=4
 "do not replace tabs with spaces
 set noexpandtab 
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=darkgray
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=darkgray
+let overlength#default_overlength = 800
+"call overlength#set_overlength('markdown', 0)
 
 let g:seoul256_background = 235
 colo seoul256
