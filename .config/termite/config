@@ -3,4 +3,4 @@ font = Fira-Code 13
 font = Monospace 13
 [colors]
 foreground = #afafaf
-background = #333333
+background = #262626
