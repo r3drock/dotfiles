@@ -82,8 +82,8 @@ let NERDTreeDirArrows = 1
 
 map <C-n> :NERDTreeToggle<CR>
 map <F2> :w<cr>
-map <F3> :!cargo check<cr>
-map <F4> :!cargo run<cr>
+map <F3> :!make<cr>
+map <F4> :!make run<cr>
 map <F5> :!cargo build<cr><cr>
 map <F7> bPldw
 nmap <S-Enter> O<Esc>
@@ -98,10 +98,11 @@ set softtabstop=4
 set shiftwidth=4
 "do not replace tabs with spaces
 set noexpandtab 
+set rnu
 
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=darkgray
-let overlength#default_overlength = 800
+let overlength#default_overlength = 80
 "call overlength#set_overlength('markdown', 0)
 
 let g:seoul256_background = 235
