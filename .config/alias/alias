@@ -2,10 +2,13 @@ alias f="fff"
 alias ll="ls -lah"
 alias lsbkl="lsblk"
 alias py="python3"
-alias cp="cp -ih"                          # confirm before overwriting something
+alias cp="cp -i -v"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
+alias sp='source ~/.profile'
+alias sa='source ~/.config/alias/alias'
+alias v='vim'
 
 #Use this for when the boss comes around to look busy.
 alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'" 
@@ -43,6 +46,8 @@ g() {
   a)		git add -v $2 ;;
   s)		git status ;;
   c)		git commit ;;
+  l)		git log ;;
+  show)		git show ;;
   push)    	git push ;;
   pull)		git pull ;;
   email)	git config user.email ;;

@@ -8,6 +8,7 @@
 !.profile
 !README.md
 !.vimrc
+!.inputrc
 
 #allow some files in subdirectories
 !/.config/
