@@ -59,6 +59,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+F2 exec $HOME/.firefox/firefox
 bindsym $mod+F11 exec $HOME/.firefox/firefox
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F7 exec redshift
+bindsym $mod+F8 exec killall redshift
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
