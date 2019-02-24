@@ -28,6 +28,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tjdevries/overlength.vim'
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'easymotion/vim-easymotion'
+
+"Plugin 'vim-syntastic/syntastic' maybe in the future I will use this
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
