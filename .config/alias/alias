@@ -1,14 +1,19 @@
-alias f="fff"
-alias ll="ls -lah"
-alias lsbkl="lsblk"
-alias py="python3"
-alias cp="cp -i -v"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias s='ssh'
+alias ll='ls -lah'
+alias lsbkl='lsblk'
+alias py='python3'
+alias cp='cp -i -v'                      # confirm before overwriting something
+alias df='df -h'                         # human-readable sizes
+alias free='free -m'                     # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/alias'
 alias v='vim'
+
+#vifm cd to last directory
+alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
+alias f='cd "$(/usr/bin/vifm --choose-dir - $@)"'
+alias vifm='cd "$(/usr/bin/vifm --choose-dir - $@)"'
 
 
 #Use this for when the boss comes around to look busy.
@@ -23,6 +28,7 @@ c() {
   b)              $EDITOR ~/.bashrc ;;
   bp)             $EDITOR ~/.bash_profile ;;
   def)            $EDITOR ~/.config/mimeapps.list ;;
+  dmenu)          $EDITOR ~/.dmenurc ;;
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
@@ -35,6 +41,7 @@ c() {
   t)              $EDITOR ~/.config/termite/config ;;
   tmux)           $EDITOR ~/.tmux.conf ;;
   v)              $EDITOR ~/.vimrc ;;
+  vf)             $EDITOR ~/.config/vifm/vifmrc ;;
   xinit)          $EDITOR ~/.xinitrc ;;
   xres)           $EDITOR ~/.Xresources && xrdb ~/.Xresources ;;
   *)              echo "Unknown application: $1" ;;
