@@ -1,3 +1,4 @@
+#type -a cmd will show all commands by that name in order of precedence
 alias s='ssh'
 alias ll='ls -lah'
 alias lsbkl='lsblk'
@@ -5,7 +6,15 @@ alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
 alias df='df -h'                         # human-readable sizes
 alias free='free -m'                     # show sizes in MB
-alias np='nano -w PKGBUILD'
+
+
+alias f="fff"
+alias ll="ls -lah"
+alias lsbkl="lsblk"
+alias py="python3"
+alias cp="cp -i -v"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/alias'
 alias v='vim'
@@ -15,6 +24,10 @@ alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
 alias f='cd "$(/usr/bin/vifm --choose-dir - $@)"'
 alias vifm='cd "$(/usr/bin/vifm --choose-dir - $@)"'
 
+alias ipas="ip addr show"
+alias sip="ip addr show"
+alias mv="mv -v"
+alias hd="hexdump -C"
 
 #Use this for when the boss comes around to look busy.
 alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'" 
