@@ -65,6 +65,7 @@ c() {
 g() {
   case $1 in
   a)		git add -v $2 ;;
+  d)		git diff $2 ;;
   s)		git status ;;
   c)		git commit ;;
   l)		git log ;;
