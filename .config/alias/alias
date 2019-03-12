@@ -1,6 +1,7 @@
 #type -a cmd will show all commands by that name in order of precedence
 alias s='ssh'
-alias ll='ls -lah'
+alias ll='lsd -la'
+alias l='lsd $1'
 alias lsbkl='lsblk'
 alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
