@@ -18,6 +18,7 @@ alias free='free -m'                      # show sizes in MB
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/alias'
 alias v='vim'
+alias mkt='cd $(mktemp -d)'
 
 #vifm cd to last directory
 alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
@@ -70,6 +71,7 @@ g() {
   c)		git commit ;;
   l)		git log ;;
   fr)		git fetch && git rebase ;;
+  frp)		git fetch && git rebase && git push ;;
   show)		git show ;;
   push)    	git push ;;
   pull)		git pull ;;
