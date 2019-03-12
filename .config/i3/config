@@ -263,7 +263,8 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id systemctl suspend && i3lock 
+bindsym $mod+9 exec --no-startup-id xscreensaver-command -lock 
+#bindsym $mod+9 exec --no-startup-id systemctl suspend && i3lock 
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -287,7 +288,7 @@ exec_always --no-startup-id setxkbmap -option 'grp:win_space_toggle'
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker slock
+exec --no-startup-id xscreensaver -nosplash
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 

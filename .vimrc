@@ -110,3 +110,6 @@ let overlength#default_overlength = 80
 
 let g:seoul256_background = 235
 colo seoul256
+
+let g:ycm_warning_symbol = '**'
+let g:ycm_error_symbol = '->'
