@@ -68,8 +68,8 @@ bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Shift+s --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+F1 exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -114,7 +114,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+bindsym $mod+Shift+m sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
