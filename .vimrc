@@ -86,7 +86,7 @@ let NERDTreeDirArrows = 1
 map <C-n> :NERDTreeToggle<CR>
 map <F2> :w<cr>
 map <F3> :!make<cr>
-map <F4> :!make run<cr>
+map <F4> :!make `echo "run%:p:h:t"`<cr>
 map <F5> :!cargo build<cr><cr>
 map <F7> bPldw
 nmap <S-Enter> O<Esc>
