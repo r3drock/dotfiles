@@ -89,8 +89,7 @@ map <F3> :!make<cr>
 map <F4> :!make `echo "run%:p:h:t"`<cr>
 map <F5> :!cargo build<cr><cr>
 map <F7> bPldw
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+map <C-J> i<cr><Esc>k$
 set mouse=
 set secure
 syntax on
