@@ -15,3 +15,4 @@ export PATH="$HOME/.local/bin:$PATH"
 if [ -f ~/.switchcapslockandescape ]; then
 	setxkbmap -option caps:swapescape
 fi
+export GPG_TTY=$(tty)
