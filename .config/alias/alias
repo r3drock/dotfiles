@@ -71,8 +71,8 @@ g() {
   s)		git status ;;
   c)		git commit ;;
   l)		git log ;;
+  pl)		git pull ;;
   fr)		git fetch && git rebase ;;
-  frp)		git fetch && git rebase && git push ;;
   show)		git show ;;
   push)    	git push ;;
   pull)		git pull ;;
