@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -27,7 +28,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'tjdevries/overlength.vim'
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'lervag/vimtex'
 Plugin 'easymotion/vim-easymotion'
 
 "Plugin 'vim-syntastic/syntastic' maybe in the future I will use this
@@ -86,7 +87,8 @@ let NERDTreeDirArrows = 1
 map <C-n> :NERDTreeToggle<CR>
 map <F2> :w<cr>
 map <F3> :!make<cr>
-map <F4> :!make `echo "run%:p:h:t"`<cr>
+map <F4> :!make qemu<cr>
+"map <F4> :!make `echo "run%:p:h:t"`<cr>
 map <F5> :!cargo build<cr><cr>
 map <F7> bPldw
 map <C-J> i<cr><Esc>k$
@@ -112,3 +114,8 @@ colo seoul256
 
 let g:ycm_warning_symbol = '**'
 let g:ycm_error_symbol = '->'
+
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_quickfix_latexlog = {'default' : 0}
