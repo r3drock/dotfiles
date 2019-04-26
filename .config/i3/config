@@ -57,10 +57,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Start Applications
 #bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec $HOME/.firefox/firefox
-bindsym $mod+F11 exec $HOME/.firefox/firefox
 bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F7 exec redshift
-bindsym $mod+F8 exec killall redshift
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
@@ -69,7 +66,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Shift+s --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -w
+bindsym Pause --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+F1 exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
