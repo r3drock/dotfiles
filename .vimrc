@@ -30,7 +30,7 @@ Plugin 'tjdevries/overlength.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'lervag/vimtex'
 Plugin 'easymotion/vim-easymotion'
-
+Plugin 'mboughaba/i3config.vim'
 "Plugin 'vim-syntastic/syntastic' maybe in the future I will use this
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
@@ -100,9 +100,9 @@ set autoindent
 set incsearch
 set softtabstop=4
 set shiftwidth=4
+set rnu
 "do not replace tabs with spaces
 set noexpandtab 
-set rnu
 
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=darkgray
@@ -119,3 +119,18 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_quickfix_latexlog = {'default' : 0}
+
+"automatic closing brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+"i3config syntax highlighting"
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+aug end
