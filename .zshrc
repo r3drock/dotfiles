@@ -4,7 +4,7 @@ eval `dircolors`
 autoload -U compinit && compinit
 
 autoload -U colors && colors
-PS1="%{%(#.$fg_bold[red][.$fg_bold[green][%n@)%}%m\
+PS1="%{%(?..$fg_bold[red]%? )%}%{%(#.$fg_bold[red][.$fg_bold[green][%n@)%}%m\
 %{%(#.$fg[cyan].$fg[white])%} %1~%(#.$fg[red].$fg[green])]%#%{$reset_color%} "
 
 export EDITOR=vim
