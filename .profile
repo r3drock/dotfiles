@@ -9,7 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache"	  #https://wiki.archlinux.org/index.php/XDG
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/nextcloud/scripts:$PATH"
-export PATH="$HOME/.local/share/OpenPuff_release:/usr/local/texlive/2018/bin/x86_64-linux"
+export PATH="$HOME/.local/share/OpenPuff_release:/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
 export PATH="$HOME/.local/share/JetBrains/Toolbox/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
