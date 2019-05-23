@@ -19,7 +19,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/bashalias'
-alias v='vim'
+alias v='nvim'
 alias mkt='cd $(mktemp -d)'
 
 #vifm cd to last directory
@@ -54,15 +54,16 @@ c() {
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
-  i3)             $EDITOR ~/.config/i3/config ;;
+  i3)             $EDITOR ~/.config/sway/config ;;
   h)              $EDITOR ~/.bash_history ;;
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
   p)         	  $EDITOR ~/.profile ;;
+  s)              $EDITOR ~/.config/sway/config ;;
   sxhkd)          $EDITOR ~/.config/sxhkd/sxhkdrc ;;
   sxiv)           $EDITOR ~/.config/sxiv/exec/key-handler ;;
   t)              $EDITOR ~/.config/termite/config ;;
   tmux)           $EDITOR ~/.tmux.conf ;;
-  v)              $EDITOR ~/.vimrc ;;
+  v)              $EDITOR ~/.config/nvim/init.vim ;;
   vf)             $EDITOR ~/.config/vifm/vifmrc ;;
   xinit)          $EDITOR ~/.xinitrc ;;
   xres)           $EDITOR ~/.Xresources && xrdb ~/.Xresources ;;

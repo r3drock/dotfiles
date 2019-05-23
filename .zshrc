@@ -12,3 +12,7 @@ export PAGER=less
 
 source $HOME/.config/alias/bashalias
 source $HOME/.config/alias/zshalias
+
+export GPG_TTY=$(tty)
+set -o emacs
+source $HOME/.inputrc
