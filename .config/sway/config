@@ -81,7 +81,7 @@ focus_follows_mouse no
 #
 # Start Applications
 	#bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-	bindsym $mod+F2 exec /usr/bin/firefox-developer-edition
+	bindsym $mod+F2 exec $BROWSER
 	bindsym $mod+F3 exec pcmanfm
 	# bindsym $mod+F3 exec ranger
     # start a terminal

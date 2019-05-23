@@ -53,14 +53,13 @@ set numberwidth=4
 "linewrap
 set wrap 
 
+" needs wl-clipboard to work
 " use system clipboard
 set clipboard+=unnamedplus
 
 " leave system clipboard unchanged upon closing vim
-autocmd VimLeave * call system("xsel -ib", getreg('+'))
+"autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
-"Close window if last active window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")&& b:NERDTree.isTabTree()) | q | endif
 "automatically close NerdTree when you open a file
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
