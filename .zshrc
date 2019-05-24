@@ -6,7 +6,7 @@ export PAGER=less
 
 autoload -U compinit && compinit
 
-set -o emacs
+bindkey -e
 autoload -U edit-command-line
 # Emacs style
 zle -N edit-command-line
