@@ -23,3 +23,5 @@ source $HOME/.config/alias/zshalias
 
 export GPG_TTY=$(tty)
 source $HOME/.inputrc
+
+lsp() { ls --color=always -l "$@" | less -r }
