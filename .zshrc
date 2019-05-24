@@ -1,4 +1,4 @@
-setopt no_beep auto_cd complete_in_word correct rm_star_wait
+setopt no_beep auto_cd complete_in_word correct rm_star_wait extended_glob
 eval `dircolors`
 
 export EDITOR=vim
