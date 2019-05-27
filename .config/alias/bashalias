@@ -18,7 +18,7 @@ alias cp="cp -i -v"                          # confirm before overwriting someth
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias sp='source ~/.profile'
-alias sa='source ~/.config/alias/bashalias'
+alias sa='source ~/.config/alias/bashalias; source ~/.config/alias/zshalias'
 alias v='nvim'
 alias mkt='cd $(mktemp -d)'
 
@@ -47,6 +47,7 @@ alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
 c() {
   case $1 in
   a)              $EDITOR ~/.config/alias/bashalias ;;
+  za)             $EDITOR ~/.config/alias/zshalias ;;
   b)              $EDITOR ~/.bashrc ;;
   bp)             $EDITOR ~/.bash_profile ;;
   def)            $EDITOR ~/.config/mimeapps.list ;;
