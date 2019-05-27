@@ -1,0 +1,7 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias -g G='| grep'
+alias -g P='| $PAGER'
+alias d='dirs -v'

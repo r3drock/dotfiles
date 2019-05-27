@@ -7,6 +7,7 @@ alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
 alias df='df -h'                         # human-readable sizes
 alias free='free -m'                     # show sizes in MB
+alias more=less
 
 
 alias f="fff"
@@ -17,8 +18,8 @@ alias cp="cp -i -v"                          # confirm before overwriting someth
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias sp='source ~/.profile'
-alias sa='source ~/.config/alias/alias'
-alias v='vim'
+alias sa='source ~/.config/alias/bashalias; source ~/.config/alias/zshalias'
+alias v='nvim'
 alias mkt='cd $(mktemp -d)'
 
 #vifm cd to last directory
@@ -30,6 +31,12 @@ alias ipas="ip addr show"
 alias sip="ip addr show"
 alias mv="mv -v"
 alias hd="hexdump -C"
+alias deleteline="echo \'sed -i -e \'14d\' file\'"
+
+alias ls='ls --color=auto'
+alias grep='grep -i --colour=auto'
+alias egrep='egrep -i --colour=auto'
+alias fgrep='fgrep -i --colour=auto'
 
 #Use this for when the boss comes around to look busy.
 alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'" 
@@ -39,7 +46,8 @@ alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
 # edit configs
 c() {
   case $1 in
-  a)              $EDITOR ~/.config/alias/alias ;;
+  a)              $EDITOR ~/.config/alias/bashalias ;;
+  za)             $EDITOR ~/.config/alias/zshalias ;;
   b)              $EDITOR ~/.bashrc ;;
   bp)             $EDITOR ~/.bash_profile ;;
   def)            $EDITOR ~/.config/mimeapps.list ;;
@@ -47,18 +55,20 @@ c() {
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
-  i3)             $EDITOR ~/.config/i3/config ;;
+  i3)             $EDITOR ~/.config/sway/config ;;
   h)              $EDITOR ~/.bash_history ;;
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
   p)         	  $EDITOR ~/.profile ;;
+  s)              $EDITOR ~/.config/sway/config ;;
   sxhkd)          $EDITOR ~/.config/sxhkd/sxhkdrc ;;
   sxiv)           $EDITOR ~/.config/sxiv/exec/key-handler ;;
   t)              $EDITOR ~/.config/termite/config ;;
   tmux)           $EDITOR ~/.tmux.conf ;;
-  v)              $EDITOR ~/.vimrc ;;
+  v)              $EDITOR ~/.config/nvim/init.vim ;;
   vf)             $EDITOR ~/.config/vifm/vifmrc ;;
   xinit)          $EDITOR ~/.xinitrc ;;
   xres)           $EDITOR ~/.Xresources && xrdb ~/.Xresources ;;
+  z)			  $EDITOR ~/.zshrc ;;
   *)              echo "Unknown application: $1" ;;
   esac
 }

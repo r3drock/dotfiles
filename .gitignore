@@ -6,9 +6,11 @@
 !.bashrc
 !.pam_environment
 !.profile
+!.zprofile
 !README.md
 !.vimrc
 !.inputrc
+!.zshrc
 
 #allow some files in subdirectories
 !/.config/
@@ -18,13 +20,16 @@
 !/.config/alacritty/alacritty.yml
 !/.config/alias/
 .config/alias/*
-!/.config/alias/alias
+!/.config/alias/bashalias
+!/.config/alias/zshalias
 
 !/.config/fontconfig/
 .config/fontconfig/*
 !/.config/fontconfig/fonts.conf
 
 !/.config/i3/
+!/.config/sway
+!/.config/nvim/init.vim
 
 !/.config/i3status/
 .config/i3status/*
