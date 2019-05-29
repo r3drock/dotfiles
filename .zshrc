@@ -25,6 +25,7 @@ source $HOME/.config/alias/bashalias
 source $HOME/.config/alias/zshalias
 
 export GPG_TTY=$(tty)
+export TERM=xterm-256color
 source $HOME/.inputrc
 
 lsp() { ls --color=always -l "$@" | less -r }
