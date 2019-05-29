@@ -9,7 +9,6 @@ alias df='df -h'                         # human-readable sizes
 alias free='free -m'                     # show sizes in MB
 alias more=less
 
-
 alias f="fff"
 alias ll="ls -lah"
 alias lsbkl="lsblk"
@@ -47,12 +46,12 @@ alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
 c() {
   case $1 in
   a)              $EDITOR ~/.config/alias/bashalias ;;
-  za)             $EDITOR ~/.config/alias/zshalias ;;
   b)              $EDITOR ~/.bashrc ;;
   bp)             $EDITOR ~/.bash_profile ;;
   def)            $EDITOR ~/.config/mimeapps.list ;;
   dmenu)          $EDITOR ~/.dmenurc ;;
   dunst)          $EDITOR ~/.config/dunst/dunstrc ;;
+  fc)			  $EDITOR ~/.config/fontconfig/fonts.conf ;;
   fstab)     sudo $EDITOR /etc/fstab ;;
   func)           $EDITOR ~/.func ;;
   i3)             $EDITOR ~/.config/sway/config ;;
@@ -69,6 +68,8 @@ c() {
   xinit)          $EDITOR ~/.xinitrc ;;
   xres)           $EDITOR ~/.Xresources && xrdb ~/.Xresources ;;
   z)			  $EDITOR ~/.zshrc ;;
+  za)             $EDITOR ~/.config/alias/zshalias ;;
+  zp)             $EDITOR ~/.zprofile ;;
   *)              echo "Unknown application: $1" ;;
   esac
 }
