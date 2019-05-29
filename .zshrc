@@ -1,4 +1,5 @@
-setopt no_beep auto_cd complete_in_word correct rm_star_wait extended_glob auto_pushd pushd_minus
+setopt no_beep auto_cd complete_in_word correct no_clobber hist_allow_clobber
+setopt rm_star_wait extended_glob auto_pushd
 eval `dircolors`
 
 export EDITOR=vim
@@ -13,9 +14,11 @@ zle -N edit-command-line
 bindkey '^XE' edit-command-line
 bindkey '^X^E' edit-command-line
 
+# prompt
 autoload -U colors && colors
 PS1="%{%(?..$fg_bold[red]%? )%}%{%(#.$fg_bold[red][.$fg_bold[green][%n@)%}%m\
 %{%(#.$fg[cyan].$fg[white])%} %1~%(#.$fg[red].$fg[green])]%#%{$reset_color%} "
+
 
 
 source $HOME/.config/alias/bashalias
