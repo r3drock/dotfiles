@@ -23,10 +23,12 @@ Plug 'junegunn/seoul256.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'wincent/Command-T'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 "maybe interesting plugins
 """ Using a non-master branch
-""Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 ""Plug 'SirVer/ultisnips'
 ""Plug 'honza/vim-snippets'
 """ Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -66,6 +68,7 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-b> :YcmCompleter GoTo<CR>
 map <F2> :w<cr>
 map <F3> :!make<cr>
 map <F4> :!make qemu<cr>
@@ -94,11 +97,13 @@ colo seoul256
 
 let g:ycm_warning_symbol = '**'
 let g:ycm_error_symbol = '->'
+let g:ycm_confirm_extra_conf = 0
 
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_quickfix_latexlog = {'default' : 0}
+
 
 "automatic closing brackets
 inoremap {<CR> {<CR>}<ESC>O
