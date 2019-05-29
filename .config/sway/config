@@ -28,7 +28,7 @@ set $right l
 # is used in the bar {} block below.
 font xft:URWGothic-Book 11
 # Your preferred terminal emulator
-set $term /usr/bin/termite
+set $term /usr/bin/kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | dmenu | xargs swaymsg exec
