@@ -23,6 +23,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'wincent/Command-T'
+Plug 'ap/vim-buftabline'
 
 "maybe interesting plugins
 """ Using a non-master branch
@@ -71,7 +72,7 @@ map <F3> :!make<cr>
 map <F4> :!make qemu<cr>
 "map <F4> :!make `echo "run%:p:h:t"`<cr>
 map <F7> bPldw
-map <C-J> i<cr><Esc>k$
+map <c-s> i<cr><Esc>k$
 set mouse=
 set secure
 syntax on
@@ -109,3 +110,40 @@ aug i3config_ft_detection
   au!
   au BufNewFile,BufRead ~/.config/sway/config set filetype=i3config
 aug end
+
+"The Leader
+let mapleader="\<Space>"
+"replace the word under cursor
+nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
+
+"move to the split in the direction shown, or create a new split
+nnoremap <silent> <C-h> :call WinMove('h')<cr>
+nnoremap <silent> <C-j> :call WinMove('j')<cr>
+nnoremap <silent> <C-k> :call WinMove('k')<cr>
+nnoremap <silent> <C-l> :call WinMove('l')<cr>
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr())
+    if (match(a:key,'[jk]'))
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd ".a:key
+  endif
+endfunction
+
+"create a new buffer (save it with :w ./path/to/FILENAME)
+nnoremap <leader>B :enew<cr>
+"close current buffer
+nnoremap <leader>bq :bp <bar> bd! #<cr>
+"close all open buffers
+nnoremap <leader>ba :bufdo bd!<cr>
+"Tab to switch to next open buffer
+nnoremap <tab> :bnext<cr>
+"Shift + Tab to switch to previous open buffer
+nnoremap <s-tab> :bprevious<cr>
+"leader key twice to cycle between last two open buffers
+nnoremap <leader><leader> <c-^>
+
