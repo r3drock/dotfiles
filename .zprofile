@@ -3,6 +3,8 @@ export EDITOR=/usr/bin/nvim
 export XDG_CONFIG_HOME="$HOME/.config"	  #Reasoning behind these XDG_DIRS
 export XDG_DATA_HOME="$HOME/.local/share" #https://0x46.net/thoughts/2019/02/01/dotfile-madness
 export XDG_CACHE_HOME="$HOME/.cache"	  #https://wiki.archlinux.org/index.php/XDG_Base_Directory
+# GTK+ 3 dark theme
+export GTK_THEME=Adwaita:dark
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/nextcloud/scripts:$PATH"
