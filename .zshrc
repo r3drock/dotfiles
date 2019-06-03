@@ -2,7 +2,6 @@ setopt no_beep auto_cd complete_in_word correct no_clobber hist_allow_clobber
 setopt rm_star_wait extended_glob auto_pushd
 eval `dircolors`
 
-export EDITOR=vim
 export PAGER=less
 
 autoload -U compinit && compinit
@@ -25,6 +24,7 @@ source $HOME/.config/alias/bashalias
 source $HOME/.config/alias/zshalias
 
 export GPG_TTY=$(tty)
+export TERM=xterm-256color
 source $HOME/.inputrc
 
 lsp() { ls --color=always -l "$@" | less -r }

@@ -6,16 +6,11 @@ alias lsbkl='lsblk'
 alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
 alias df='df -h'                         # human-readable sizes
-alias free='free -m'                     # show sizes in MB
 alias more=less
 
 alias f="fff"
 alias ll="ls -lah"
-alias lsbkl="lsblk"
 alias py="python3"
-alias cp="cp -i -v"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/bashalias; source ~/.config/alias/zshalias'
 alias v='nvim'
