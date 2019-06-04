@@ -47,7 +47,7 @@ call plug#end()
 " airline configuration
 set laststatus=2
 let g:airline#extensions#whitespace#enabled = 0 " disable whitespace checks
-let g:airline_theme = 'murmur'
+let g:airline_theme = 'gruvbox'
 
 "linenumbers
 set number
