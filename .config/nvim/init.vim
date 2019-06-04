@@ -19,6 +19,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
@@ -92,8 +93,9 @@ set noexpandtab
 let overlength#default_overlength = 80
 "call overlength#set_overlength('markdown', 0)
 
-let g:seoul256_background = 235
-colo seoul256
+let g:gruvbox_contrast_dark = "medium"
+let g:gruvbox_contrast_light = "medium"
+colo gruvbox
 
 let g:ycm_warning_symbol = '**'
 let g:ycm_error_symbol = '->'
@@ -121,10 +123,6 @@ let mapleader="\<Space>"
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
 
 "move to the split in the direction shown, or create a new split
-nnoremap <silent> <C-h> :call WinMove('h')<cr>
-nnoremap <silent> <C-j> :call WinMove('j')<cr>
-nnoremap <silent> <C-k> :call WinMove('k')<cr>
-nnoremap <silent> <C-l> :call WinMove('l')<cr>
 function! WinMove(key)
   let t:curwin = winnr()
   exec "wincmd ".a:key
