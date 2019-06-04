@@ -1,5 +1,21 @@
 theme = "gruvbox-dark"
-icons = "material"
+icons = "awesome"
+
+[[block]]
+block = "focused_window"
+max_width = 21
+
+[[block]]
+block = "net"
+device = "enp37s0"
+ip = true
+speed_down = false
+speed_up = false
+
+[[block]]
+block = "speedtest"
+bytes = true
+interval = 1800
 
 [[block]]
 block = "disk_space"
@@ -22,12 +38,12 @@ block = "cpu"
 interval = 1
 
 [[block]]
-block = "load"
-interval = 1
-format = "{1m}"
+block = "sound"
 
 [[block]]
-block = "sound"
+block = "weather"
+format = "({location}) {temp}°, {wind} m/s {direction}"
+service = { name = "openweathermap", api_key = "d8a7eb292448cdf4a76e9cd1c17cb853", city_id = "2935517", units = "metric" }
 
 [[block]]
 block = "time"
