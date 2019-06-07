@@ -22,7 +22,6 @@ Plug 'junegunn/seoul256.vim'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
-Plug 'wincent/Command-T'
 Plug 'ap/vim-buftabline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -121,10 +120,6 @@ let mapleader="\<Space>"
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
 
 "move to the split in the direction shown, or create a new split
-nnoremap <silent> <C-h> :call WinMove('h')<cr>
-nnoremap <silent> <C-j> :call WinMove('j')<cr>
-nnoremap <silent> <C-k> :call WinMove('k')<cr>
-nnoremap <silent> <C-l> :call WinMove('l')<cr>
 function! WinMove(key)
   let t:curwin = winnr()
   exec "wincmd ".a:key
@@ -150,4 +145,4 @@ nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
 "leader key twice to cycle between last two open buffers
 nnoremap <leader><leader> <c-^>
-
+nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
