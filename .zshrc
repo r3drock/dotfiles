@@ -1,10 +1,9 @@
-setopt no_beep auto_cd complete_in_word correct no_clobber hist_allow_clobber
+setopt no_beep auto_cd correct no_clobber hist_allow_clobber
 setopt rm_star_wait extended_glob auto_pushd
 eval `dircolors`
 
 export PAGER=less
 
-autoload -U compinit && compinit
 
 bindkey -e
 autoload -U edit-command-line
@@ -12,12 +11,34 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^XE' edit-command-line
 bindkey '^X^E' edit-command-line
+bindkey '\e[3~' delete-char
 
 # prompt
-autoload -U colors && colors
-PS1="%{%(?..$fg_bold[red]%? )%}%{%(#.$fg_bold[red][.$fg_bold[green][%n@)%}%m\
-%{%(#.$fg[cyan].$fg[white])%} %1~%(#.$fg[red].$fg[green])]%#%{$reset_color%} "
 
+autoload -U colors && colors
+autoload -U promptinit && promptinit
+prompt bart
+#PS1="%{%(?..$fg_bold[red]%? )%}%{%(#.$fg_bold[red][.$fg_bold[green][%n@)%}%m\
+#%{%(#.$fg[cyan].$fg[white])%} %1~%(#.$fg[red].$fg[green])]%#%{$reset_color%} "
+
+
+# Completion settings
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%S%d%s'
+zstyle ':completion:*:corrections' format $'%{\e[0;31m%}%d${\e[0m%}'
+zstyle ':completion:*:messages' format '%S%d%s'
+zstyle ':completion:*:warnings' format $'%{\e[0;31m%}%d${\e[0m%}'
+zstyle ':completion:*:(all-|)files' ignored-patterns \
+	"(*.BAK|*.bak|*.o|*.aux|*.toc|*.swp|*~)"
+zstyle ':completion:rm:(all-|)files' ignored-patterns
+zstyle ':completion:*:default' list-colors  ${(s.:.)LS_COLORS}
+zstyle ':completion:*' completer _complete _correct _approximate
+zstyle ':completion:*:_approximate:*' max_errors \
+	'reply=( $(( ($#PREFIX+$#SUFFIX(/3 )) numeric )'
 
 
 source $HOME/.config/alias/bashalias
