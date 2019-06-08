@@ -27,6 +27,7 @@ Plug 'wincent/Command-T'
 Plug 'ap/vim-buftabline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'rust-lang/rust.vim'
 
 "maybe interesting plugins
 """ Using a non-master branch
@@ -95,6 +96,7 @@ let overlength#default_overlength = 80
 
 let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_contrast_light = "medium"
+set background=dark
 colo gruvbox
 
 let g:ycm_warning_symbol = '**'
