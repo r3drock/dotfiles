@@ -2,6 +2,9 @@ theme = "gruvbox-dark"
 icons = "awesome"
 
 [[block]]
+block = "template"
+
+[[block]]
 block = "focused_window"
 max_width = 21
 
@@ -27,8 +30,8 @@ block = "sound"
 
 [[block]]
 block = "weather"
-format = "({location}) {temp}°, {wind} m/s {direction}"
-service = { name = "openweathermap", api_key = "d8a7eb292448cdf4a76e9cd1c17cb853", city_id = "2935517", units = "metric" }
+format = "{temp}°"
+service = { name = "openweathermap", api_key = "d8a7eb292448cdf4a76e9cd1c17cb853", city_id = "2947416", units = "metric" }
 
 [[block]]
 block = "time"
