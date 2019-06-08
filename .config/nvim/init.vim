@@ -82,6 +82,8 @@ syntax on
 set tabstop=4
 set autoindent
 set incsearch
+set ignorecase
+set smartcase
 set softtabstop=4
 set shiftwidth=4
 
