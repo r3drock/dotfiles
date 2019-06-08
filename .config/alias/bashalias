@@ -12,9 +12,10 @@ alias f="fff"
 alias ll="ls -lah"
 alias py="python3"
 alias sp='source ~/.profile'
-alias sa='source ~/.config/alias/bashalias; source ~/.config/alias/zshalias'
+alias sa='source ~/.config/alias/bashalias;'
 alias v='nvim'
 alias mkt='cd $(mktemp -d)'
+alias wipe=' wipe'
 
 #vifm cd to last directory
 alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
@@ -90,7 +91,7 @@ g() {
 }
 
 # ex - archive extractor
-ex() {
+extract() {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;

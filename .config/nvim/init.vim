@@ -23,7 +23,6 @@ Plug 'morhetz/gruvbox'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
-Plug 'wincent/Command-T'
 Plug 'ap/vim-buftabline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -150,4 +149,4 @@ nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
 "leader key twice to cycle between last two open buffers
 nnoremap <leader><leader> <c-^>
-
+nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
