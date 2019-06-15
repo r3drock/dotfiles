@@ -74,6 +74,14 @@ output * bg /usr/share/backgrounds/sway/pawel-czerwinski-1612025-unsplash.jpg fi
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+## Input configuration
+	input "1153:2:Tom_Wong-Cornall_ibm-capsense-usb" {
+		xkb_layout us 
+		xkb_capslock disabled
+		xkb_numlock enabled
+		xkb_options caps:swapescape
+	}
+
 focus_follows_mouse no
 ### Key bindings
 #

@@ -26,6 +26,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loadi
 Plug 'ap/vim-buftabline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'rust-lang/rust.vim'
 
 "maybe interesting plugins
 """ Using a non-master branch
@@ -46,7 +47,7 @@ call plug#end()
 " airline configuration
 set laststatus=2
 let g:airline#extensions#whitespace#enabled = 0 " disable whitespace checks
-let g:airline_theme = 'murmur'
+let g:airline_theme = 'gruvbox'
 
 "linenumbers
 set number
@@ -81,6 +82,8 @@ syntax on
 set tabstop=4
 set autoindent
 set incsearch
+set ignorecase
+set smartcase
 set softtabstop=4
 set shiftwidth=4
 
@@ -94,6 +97,7 @@ let overlength#default_overlength = 80
 
 let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_contrast_light = "medium"
+set background=dark
 colo gruvbox
 
 let g:ycm_warning_symbol = '**'
