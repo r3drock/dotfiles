@@ -63,6 +63,9 @@ set clipboard+=unnamedplus
 " leave system clipboard unchanged upon closing vim
 "autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
+" syntax highlighting for odd filetypes
+autocmd BufNewFile,BufRead *.cl set syntax=c
+
 "automatically close NerdTree when you open a file
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
@@ -71,7 +74,7 @@ let NERDTreeDirArrows = 1
 map <C-n> :NERDTreeToggle<CR>
 map <C-b> :YcmCompleter GoTo<CR>
 map <F2> :w<cr>
-map <F3> :!make<cr>
+map <F3> :silent !make<cr>
 map <F4> :!make qemu<cr>
 "map <F4> :!make `echo "run%:p:h:t"`<cr>
 map <F7> bPldw
@@ -82,6 +85,7 @@ syntax on
 set tabstop=4
 set autoindent
 set incsearch
+set hlsearch
 set ignorecase
 set smartcase
 set softtabstop=4
