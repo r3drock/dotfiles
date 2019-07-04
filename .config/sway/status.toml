@@ -38,4 +38,4 @@ service = { name = "openweathermap", api_key = "d8a7eb292448cdf4a76e9cd1c17cb853
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R"
+format = "%R %a %d/%m"
