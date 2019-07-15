@@ -29,7 +29,8 @@
 
 !/.config/i3/
 !/.config/sway
-!/.config/nvim/init.vim
+!/.config/nvim
+.config/nvim/.netrwhist
 
 !/.config/i3status/
 .config/i3status/*

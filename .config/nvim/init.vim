@@ -23,7 +23,6 @@ Plug 'morhetz/gruvbox'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
-Plug 'ap/vim-buftabline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
@@ -56,6 +55,10 @@ set numberwidth=4
 "linewrap
 set wrap 
 
+"spellchecking
+set spell spelllang=de_de
+map <F5> 1z=
+
 " needs wl-clipboard to work
 " use system clipboard
 set clipboard+=unnamedplus
@@ -69,12 +72,14 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 map <C-n> :NERDTreeToggle<CR>
+nmap <silent> cp "_ciw<C-R>+<Esc>
 map <C-b> :YcmCompleter GoTo<CR>
 map <F2> :w<cr>
 map <F3> :!make<cr>
 map <F4> :!make qemu<cr>
 "map <F4> :!make `echo "run%:p:h:t"`<cr>
-map <F7> bPldw
+map <F7> "_diwP
+map Y y$
 map <c-s> i<cr><Esc>k$
 set mouse=
 set secure
@@ -92,11 +97,13 @@ set noexpandtab
 
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=darkgray
-let overlength#default_overlength = 80
+let overlength#default_overlength = 81
 "call overlength#set_overlength('markdown', 0)
+set tw=80
 
 let g:gruvbox_contrast_dark = "medium"
-let g:gruvbox_contrast_light = "medium"
+let g:gruvbox_contrast_light = "hard"
+let g:gruvbox_hls_cursor= "orange"
 set background=dark
 colo gruvbox
 
