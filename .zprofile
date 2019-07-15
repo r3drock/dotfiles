@@ -12,4 +12,6 @@ export PATH="$HOME/.local/share/OpenPuff_release:/usr/local/texlive/2018/bin/x86
 export PATH="$HOME/.local/share/JetBrains/Toolbox/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
+export PATH="/opt/rocm/bin/:$PATH"
+export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=firefox
