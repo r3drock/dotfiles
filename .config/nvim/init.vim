@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Make sure you use single quotes
 
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 Plug 'tjdevries/overlength.vim'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
