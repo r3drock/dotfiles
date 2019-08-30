@@ -156,15 +156,25 @@ focus_follows_mouse no
     bindsym $mod+8 workspace 8
     bindsym $mod+9 workspace 9
     # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 1
-    bindsym $mod+Shift+2 move container to workspace 2
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
+    bindsym $mod+Ctrl+1 move container to workspace 1
+    bindsym $mod+Ctrl+2 move container to workspace 2
+    bindsym $mod+Ctrl+3 move container to workspace 3
+    bindsym $mod+Ctrl+4 move container to workspace 4
+    bindsym $mod+Ctrl+5 move container to workspace 5
+    bindsym $mod+Ctrl+6 move container to workspace 6
+    bindsym $mod+Ctrl+7 move container to workspace 7
+    bindsym $mod+Ctrl+8 move container to workspace 8
+    bindsym $mod+Ctrl+9 move container to workspace 9
+	# Move to workspace with focused container
+	bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+	bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+	bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+	bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+	bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+	bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+	bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+	bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 # workspace back and forth (with/without active container)
