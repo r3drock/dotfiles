@@ -76,7 +76,7 @@ output * bg /usr/share/backgrounds/sway/pawel-czerwinski-1612025-unsplash.jpg fi
 
 ## Input configuration
 	input "1153:2:Tom_Wong-Cornall_ibm-capsense-usb" {
-		xkb_layout us 
+		xkb_layout us
 		xkb_capslock disabled
 		xkb_numlock enabled
 		xkb_options caps:swapescape
@@ -88,7 +88,6 @@ focus_follows_mouse no
 # Basics:
 #
 # Start Applications
-	#bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 	bindsym $mod+F2 exec $BROWSER
 	bindsym $mod+F3 exec pcmanfm
 	# bindsym $mod+F3 exec ranger
@@ -177,18 +176,17 @@ focus_follows_mouse no
 
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-# workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+	# workspace back and forth (with/without active container)
+	workspace_auto_back_and_forth yes
+	bindsym $mod+b workspace back_and_forth
+	bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+
 #
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $mod+g splith
-    bindsym $mod+v splitv
+	# split orientation
+	bindsym $mod+v split h
+	bindsym $mod+n split v
 	bindsym $mod+q split toggle
 
     # Switch the current container between different layout styles
@@ -200,10 +198,10 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+g floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+g focus mode_toggle
 
     # move focus to the parent container
     bindsym $mod+a focus parent
@@ -368,44 +366,5 @@ smart_gaps on
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
-
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
 
 include /etc/sway/config.d/*
