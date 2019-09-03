@@ -1,5 +1,5 @@
 setopt no_beep auto_cd correct no_clobber hist_allow_clobber
-setopt rm_star_wait extended_glob auto_pushd
+setopt rm_star_wait extended_glob auto_pushd interactivecomments
 eval `dircolors`
 
 export PAGER=less
