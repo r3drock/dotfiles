@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Make sure you use single quotes
 
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 Plug 'tjdevries/overlength.vim'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
@@ -84,7 +85,7 @@ map <F4> :!make qemu<cr>
 map <F7> "_diwP
 map Y y$
 map <c-s> i<cr><Esc>k$
-set mouse=
+set mouse=n
 set secure
 syntax on
 set tabstop=4

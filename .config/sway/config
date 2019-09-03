@@ -102,9 +102,9 @@ focus_follows_mouse no
     bindsym $mod+d exec $menu
 
 	# make a screenshot
-	bindsym Print --release exec --no-startup-id grim -g "$(slurp)" $HOME/pictures/$(date +'%Y-%m-%d_%H:%M:%S_screenshot.png')
+	bindsym $mod+Print exec --no-startup-id grim -g "1920,0 1920x1080" $HOME/pictures/$(date +'%Y-%m-%d_%H:%M:%S_screenshot.png')
 	# make a screenshot of a region
-	bindsym Pause exec --no-startup-id grim -g "$(slurp)" $HOME/pictures/$(date +'%Y-%m-%d_%H:%M:%S_screenshot.png')
+	bindsym $mod+Shift+Print exec --no-startup-id grim -g "$(slurp)" $HOME/pictures/$(date +'%Y-%m-%d_%H:%M:%S_screenshot.png')
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
