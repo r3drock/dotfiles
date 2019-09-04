@@ -17,8 +17,8 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+bindsym $mod+y border pixel 2
+
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -186,7 +186,7 @@ focus_follows_mouse no
 #
 	# split orientation
 	bindsym $mod+v split h
-	bindsym $mod+n split v
+	#bindsym $mod+n split v
 	bindsym $mod+q split toggle
 
     # Switch the current container between different layout styles
