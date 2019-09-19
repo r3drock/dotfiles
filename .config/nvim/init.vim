@@ -71,6 +71,8 @@ set clipboard+=unnamedplus
 
 " syntax highlighting for odd filetypes
 autocmd BufNewFile,BufRead *.cl set syntax=c
+autocmd FileType yaml setlocal list listchars+=trail:◦
+
 
 "automatically close NerdTree when you open a file
 let NERDTreeQuitOnOpen = 1
