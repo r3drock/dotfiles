@@ -28,6 +28,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'chase/vim-ansible-yaml', { 'for': 'yaml' }
 
 "maybe interesting plugins
 """ Using a non-master branch
@@ -86,7 +87,7 @@ map <F4> :!make qemu<cr>
 map <F7> "_diwP
 map Y y$
 map <c-s> i<cr><Esc>k$
-set mouse=n
+set mouse=nv
 set secure
 syntax on
 set tabstop=4
