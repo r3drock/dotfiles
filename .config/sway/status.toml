@@ -2,9 +2,6 @@ theme = "gruvbox-dark"
 icons = "awesome"
 
 [[block]]
-block = "template"
-
-[[block]]
 block = "focused_window"
 max_width = 21
 
