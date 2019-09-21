@@ -42,6 +42,7 @@ zstyle ':completion:*:_approximate:*' max_errors \
 
 source $HOME/.config/alias/bashalias
 source $HOME/.config/alias/zshalias
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export GPG_TTY=$(tty)
 export TERM=xterm-256color

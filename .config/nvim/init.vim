@@ -57,7 +57,7 @@ set numberwidth=4
 set wrap 
 
 "spellchecking
-set spell spelllang=de_de
+set spell spelllang=en_us
 map <F5> 1z=
 
 " needs wl-clipboard to work
