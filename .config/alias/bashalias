@@ -55,10 +55,12 @@ c() {
   func)           $EDITOR ~/.func ;;
   i3)             $EDITOR ~/.config/i3/config ;;
   h)              $EDITOR ~/.bash_history ;;
+  k)			  $EDITOR ~/.ssh/known_hosts ;;
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
   p)         	  $EDITOR ~/.profile ;;
   s)              $EDITOR ~/.config/sway/config ;;
   ss)             $EDITOR ~/.config/sway/status.toml ;;
+  ssh)			  $EDITOR ~/.ssh/config ;;
   sxhkd)          $EDITOR ~/.config/sxhkd/sxhkdrc ;;
   sxiv)           $EDITOR ~/.config/sxiv/exec/key-handler ;;
   t)              $EDITOR ~/.config/termite/config ;;

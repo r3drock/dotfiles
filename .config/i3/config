@@ -32,7 +32,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun #dmenu_recency
+bindsym $mod+d exec --no-startup-id rofi -show run #dmenu_recency
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -61,6 +61,7 @@ bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+# make Screenshot 
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Shift+s --release exec --no-startup-id i3-scrot -s
 bindsym Pause --release exec --no-startup-id i3-scrot -w

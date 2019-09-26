@@ -28,6 +28,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'chase/vim-ansible-yaml'
 
 "maybe interesting plugins
 """ Using a non-master branch

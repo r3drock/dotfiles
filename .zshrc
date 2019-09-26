@@ -48,6 +48,8 @@ export GPG_TTY=$(tty)
 export TERM=xterm-256color
 source $HOME/.inputrc
 
+export ANSIBLE_COW_SELECTION=elephant
+
 # history settings
 HISTFILE=~/.zsh_history
 SAVEHIST=10000
