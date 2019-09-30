@@ -135,6 +135,12 @@ aug i3config_ft_detection
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
 
+"python 
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nocindent
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+filetype plugin indent on
+
 "The Leader
 let mapleader="\<Space>"
 "replace the word under cursor
