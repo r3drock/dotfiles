@@ -105,7 +105,7 @@ set softtabstop=4
 set shiftwidth=4
 
 "do not replace tabs with spaces
-set noexpandtab 
+set expandtab 
 
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=darkgray
