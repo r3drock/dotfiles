@@ -18,3 +18,6 @@ export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
 export PATH="/opt/rocm/bin/:$PATH"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=firefox
+if [ -f ~/.switchcapslockandescape ] || [ "$DESKTOP_SESSION" = "/usr/share/xsessions/gnome-xorg" ] ; then
+	setxkbmap -option caps:swapescape
+fi
