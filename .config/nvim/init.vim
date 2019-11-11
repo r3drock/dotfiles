@@ -30,7 +30,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'chase/vim-ansible-yaml'
+Plug 'chase/vim-ansible-yaml', { 'for': 'yaml' }
 
 "maybe interesting plugins
 """ Using a non-master branch
@@ -74,6 +74,11 @@ set clipboard+=unnamedplus
 
 " syntax highlighting for odd filetypes
 autocmd BufNewFile,BufRead *.cl set syntax=c
+"autocmd FileType yaml setlocal list listchars+=trail:◦
+set list
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+
+
 
 "automatically close NerdTree when you open a file
 let NERDTreeQuitOnOpen = 1
@@ -90,7 +95,7 @@ map <F4> :!make qemu<cr>
 map <F7> "_diwP
 map Y y$
 map <c-s> i<cr><Esc>k$
-set mouse=n
+set mouse=nv
 set secure
 syntax on
 set tabstop=4
@@ -103,7 +108,7 @@ set softtabstop=4
 set shiftwidth=4
 
 "do not replace tabs with spaces
-set noexpandtab 
+set expandtab 
 
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=darkgray

@@ -1,3 +1,6 @@
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0 
+export QT_SCALE_FACTOR=1 
 export EDITOR=/usr/bin/nvim
 #export your preferred browser from here
 export XDG_CONFIG_HOME="$HOME/.config"	  #Reasoning behind these XDG_DIRS
@@ -15,3 +18,6 @@ export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
 export PATH="/opt/rocm/bin/:$PATH"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=firefox
+if [ -f ~/.switchcapslockandescape ] || [ "$DESKTOP_SESSION" = "/usr/share/xsessions/gnome-xorg" ] ; then
+	setxkbmap -option caps:swapescape
+fi

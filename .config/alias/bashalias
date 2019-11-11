@@ -21,6 +21,8 @@ alias wipe=' wipe'
 alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
 alias f='cd "$(/usr/bin/vifm --choose-dir - $@)"'
 alias vifm='cd "$(/usr/bin/vifm --choose-dir - $@)"'
+# make new directory and switch to it
+alias ms="mkdir $2 && cd $2"
 
 alias ipas="ip addr show"
 alias sip="ip addr show"
