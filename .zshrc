@@ -12,6 +12,8 @@ zle -N edit-command-line
 bindkey '^XE' edit-command-line
 bindkey '^X^E' edit-command-line
 bindkey '\e[3~' delete-char
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # prompt
 
