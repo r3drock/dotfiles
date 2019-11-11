@@ -4,4 +4,5 @@ alias ....='cd ../../..'
 
 alias -g G='| grep'
 alias -g P='| $PAGER'
+alias -g X='| xclip -selection clipboard'
 alias d='dirs -v'
