@@ -13,7 +13,7 @@ alias ll="ls -lah"
 alias py="python3"
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/bashalias;'
-alias v='nvim $(fzf --height 40%)'
+#alias v='nvim $(fzf --height 40%)'
 alias mkt='cd $(mktemp -d)'
 alias wipe=' wipe'
 
@@ -43,6 +43,11 @@ alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'"
 #fix x3 with steam
 #alias steam="LD_PRELOAD='/usr/lib32/libz.so.1.2.11' steam"
 
+alias bh='echo 187 >| /sys/class/backlight/intel_backlight/brightness'
+alias bm='echo 87 >| /sys/class/backlight/intel_backlight/brightness'
+alias bhl='echo 37 >| /sys/class/backlight/intel_backlight/brightness'
+alias bl='echo 1 >| /sys/class/backlight/intel_backlight/brightness'
+
 # edit configs
 c() {
   case $1 in
@@ -57,10 +62,12 @@ c() {
   func)           $EDITOR ~/.func ;;
   i3)             $EDITOR ~/.config/i3/config ;;
   h)              $EDITOR ~/.bash_history ;;
+  k)			  $EDITOR ~/.ssh/known_hosts ;;
   mimeapps)       $EDITOR ~/.config/mimeapps.list ;;
   p)         	  $EDITOR ~/.profile ;;
   s)              $EDITOR ~/.config/sway/config ;;
   ss)             $EDITOR ~/.config/sway/status.toml ;;
+  ssh)			  $EDITOR ~/.ssh/config ;;
   sxhkd)          $EDITOR ~/.config/sxhkd/sxhkdrc ;;
   sxiv)           $EDITOR ~/.config/sxiv/exec/key-handler ;;
   t)              $EDITOR ~/.config/termite/config ;;

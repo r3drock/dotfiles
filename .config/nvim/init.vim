@@ -21,6 +21,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'baeuml/summerfruit256.vim'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
@@ -59,7 +61,8 @@ set numberwidth=4
 set wrap 
 
 "spellchecking
-set spell spelllang=en_us
+set spell spelllang=de
+"set spell spelllang=en_us
 map <F5> 1z=
 
 " needs wl-clipboard to work
@@ -116,8 +119,10 @@ set tw=80
 let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_contrast_light = "hard"
 let g:gruvbox_hls_cursor= "orange"
-set background=dark
-colo gruvbox
+"set background=light
+"colo gruvbox
+colo summerfruit256
+let g:seoul256_background = 256
 
 let g:ycm_warning_symbol = '**'
 let g:ycm_error_symbol = '->'
@@ -139,6 +144,12 @@ aug i3config_ft_detection
   au BufNewFile,BufRead ~/.config/sway/config set filetype=i3config
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
+
+"python 
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nocindent
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+filetype plugin indent on
 
 "The Leader
 let mapleader="\<Space>"

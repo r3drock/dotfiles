@@ -12,6 +12,8 @@ zle -N edit-command-line
 bindkey '^XE' edit-command-line
 bindkey '^X^E' edit-command-line
 bindkey '\e[3~' delete-char
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # prompt
 
@@ -47,6 +49,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export GPG_TTY=$(tty)
 export TERM=xterm-256color
 source $HOME/.inputrc
+
+export ANSIBLE_COW_SELECTION=elephant
 
 # history settings
 HISTFILE=~/.zsh_history
