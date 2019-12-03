@@ -7,7 +7,7 @@ alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
 alias df='df -h'                         # human-readable sizes
 alias more=less
-alias cd='. ranger'
+alias r='. ranger'
 
 alias f="fff"
 alias ll="ls -lah"
@@ -19,9 +19,9 @@ alias mkt='cd $(mktemp -d)'
 alias wipe=' wipe'
 
 #vifm cd to last directory
-alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
-alias f='cd "$(/usr/bin/vifm --choose-dir - $@)"'
-alias vifm='cd "$(/usr/bin/vifm --choose-dir - $@)"'
+alias vf='cd "$(/usr/bin/vifm $@)"'
+alias f='cd "$(/usr/bin/vifm $@)"'
+alias vifm='cd "$(/usr/bin/vifm $@)"'
 # make new directory and switch to it
 alias ms="mkdir $2 && cd $2"
 

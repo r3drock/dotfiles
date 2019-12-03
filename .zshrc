@@ -1,9 +1,47 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/home/r3drock/.oh-my-zsh"
+
+ZSH_THEME="random"
+#ZSH_THEME="robbyrussell"
+HYPHEN_INSENSITIVE="true"
+DISABLE_UPDATE_PROMPT="true"
+
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(fzf)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+
 setopt no_beep auto_cd correct no_clobber hist_allow_clobber
 setopt rm_star_wait extended_glob auto_pushd interactivecomments
 eval `dircolors`
 
 export PAGER=less
-
+export MANPATH="/usr/share/man:$MANPATH"
 
 bindkey -e
 autoload -U edit-command-line
@@ -19,7 +57,7 @@ bindkey "^[[1;5D" backward-word
 
 autoload -U colors && colors
 autoload -U promptinit && promptinit
-prompt bart
+#prompt bart
 #PS1="%{%(?..$fg_bold[red]%? )%}%{%(#.$fg_bold[red][.$fg_bold[green][%n@)%}%m\
 #%{%(#.$fg[cyan].$fg[white])%} %1~%(#.$fg[red].$fg[green])]%#%{$reset_color%} "
 
