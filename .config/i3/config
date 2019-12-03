@@ -259,7 +259,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id xscreensaver-command -lock 
+bindsym $mod+9 exec --no-startup-id i3exit lock
 #bindsym $mod+9 exec --no-startup-id systemctl suspend && i3lock 
 
 # Autostart applications
@@ -281,7 +281,6 @@ exec_always --no-startup-id setxkbmap -option 'grp:win_space_toggle'
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xscreensaver -nosplash
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -350,7 +349,8 @@ exec_always --no-startup-id fix_xcursor
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #758084 #80FFF9 #FDF6E3
+  client.focused          #556064 #859094 #80FFF9 #FDF6E3
+#  client.focused          #ffffff #ff0000 #00ff00 #0000ff
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2

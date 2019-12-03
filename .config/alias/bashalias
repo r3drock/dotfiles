@@ -7,6 +7,7 @@ alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
 alias df='df -h'                         # human-readable sizes
 alias more=less
+alias cd='. ranger'
 
 alias f="fff"
 alias ll="ls -lah"
