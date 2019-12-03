@@ -31,15 +31,15 @@ font xft:URWGothic-Book 11
 set $term /usr/bin/kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-#set $menu dmenu_path | dmenu | xargs swaymsg exec
-set $menu rofi -show run
+set $menu dmenu_path | dmenu | xargs swaymsg exec
+#set $menu rofi -show run
 
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec pavucontrol
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/pawel-czerwinski-1612025-unsplash.jpg fill
+output * bg /usr/share/backgrounds/sway/84cb5f755b0025d4_aa_agency_stdiscs2_ot_mq_hp_2880x1620.jpg fill
 #
 # Example configuration:
 #
@@ -81,6 +81,11 @@ output * bg /usr/share/backgrounds/sway/pawel-czerwinski-1612025-unsplash.jpg fi
 		xkb_capslock disabled
 		xkb_numlock enabled
 		xkb_options caps:swapescape
+	}
+## Input configuration
+	input "8916:4886:Mionix_Castor" {
+        accel_profile flat
+        scroll_factor 2.0
 	}
 
 focus_follows_mouse no

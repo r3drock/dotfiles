@@ -35,6 +35,7 @@ zstyle ':completion:*:corrections' format $'%{\e[0;31m%}%d${\e[0m%}'
 zstyle ':completion:*:messages' format '%S%d%s'
 zstyle ':completion:*:warnings' format $'%{\e[0;31m%}%d${\e[0m%}'
 zstyle ':completion:*:(all-|)files' ignored-patterns  '(*.BAK|*.bak|*.o|*.aux|*.toc|*.swp|*~)'
+zstyle ':completion:vim:(all-|)files' ignored-patterns '(*.BAK|*.bak|*.o|*.aux|*.log|*.pdf|*.out|*.toc|*.swp|*~)'
 zstyle ':completion:rm:(all-|)files' ignored-patterns
 zstyle ':completion:*:default' list-colors  ${(s.:.)LS_COLORS}
 zstyle ':completion:*' completer _complete _correct _approximate
