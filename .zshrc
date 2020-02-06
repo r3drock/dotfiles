@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/r3drock/.oh-my-zsh"
 
-ZSH_THEME="random"
+ZSH_THEME="trapd00r"
 #ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
 DISABLE_UPDATE_PROMPT="true"
@@ -85,11 +85,8 @@ source $HOME/.config/alias/bashalias
 source $HOME/.config/alias/zshalias
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export GPG_TTY=$(tty)
-export TERM=xterm-256color
 source $HOME/.inputrc
 
-export ANSIBLE_COW_SELECTION=elephant
 
 # history settings
 HISTFILE=~/.zsh_history
@@ -98,3 +95,5 @@ HISTSIZE=12000
 setopt hist_no_store hist_reduce_blanks hist_ignore_all_dups hist_ignore_space share_history append_history
 
 lsp() { ls --color=always -l "$@" | less -r }
+
+eval $(thefuck --alias)
