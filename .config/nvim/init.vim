@@ -11,7 +11,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tjdevries/overlength.vim'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
 "Plug 'easymotion/vim-easymotion'
 Plug 'mboughaba/i3config.vim'
@@ -26,8 +25,6 @@ Plug 'baeuml/summerfruit256.vim'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
-Plug 'Valloric/YouCompleteMe'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'chase/vim-ansible-yaml', { 'for': 'yaml' }
@@ -62,6 +59,7 @@ set wrap
 
 "spellchecking
 set spell spelllang=de
+set nospell
 "set spell spelllang=en_us
 map <F5> 1z=
 
