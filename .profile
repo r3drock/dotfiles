@@ -27,3 +27,4 @@ export ANSIBLE_COW_SELECTION=elephant
 export GPG_TTY=$(tty)
 export TERM=xterm-256color
 export RUST_SRC_PATH="/home/r3drock/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+if [ -e /home/r3drock/.nix-profile/etc/profile.d/nix.sh ]; then . /home/r3drock/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
