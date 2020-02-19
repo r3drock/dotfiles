@@ -15,8 +15,6 @@
 #allow some files in subdirectories
 !/.config/
 .config/*
-!/.config/alacritty/
-.config/alacritty/*
 !/.config/alacritty/alacritty.yml
 !/.config/alias/
 .config/alias/*
