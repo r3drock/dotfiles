@@ -11,6 +11,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tjdevries/overlength.vim'
+Plug 'pangloss/vim-javascript'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
 "Plug 'easymotion/vim-easymotion'
