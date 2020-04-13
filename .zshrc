@@ -29,7 +29,7 @@ ENABLE_CORRECTION="true"
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(fzf)
+plugins=(fzf zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,7 +83,6 @@ zstyle ':completion:*:_approximate:*' max_errors \
 
 source $HOME/.config/alias/bashalias
 source $HOME/.config/alias/zshalias
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source $HOME/.inputrc
 
