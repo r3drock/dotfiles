@@ -9,15 +9,5 @@ export XDG_CACHE_HOME="$HOME/.cache"	  #https://wiki.archlinux.org/index.php/XDG
 # GTK+ 3 dark theme
 export GTK_THEME=Adwaita:dark
 
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/nextcloud/scripts:$PATH"
-export PATH="$HOME/.local/share/OpenPuff_release:/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
-export PATH="$HOME/.local/share/JetBrains/Toolbox/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
-export PATH="/opt/rocm/bin/:$PATH"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=firefox
-if [ -f ~/.switchcapslockandescape ] || [ "$DESKTOP_SESSION" = "/usr/share/xsessions/gnome-xorg" ] ; then
-	setxkbmap -option caps:swapescape
-fi

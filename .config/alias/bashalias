@@ -7,23 +7,27 @@ alias py='python3'
 alias cp='cp -i -v'                      # confirm before overwriting something
 alias df='df -h'                         # human-readable sizes
 alias more=less
+alias r='. ranger'
 
-alias f="fff"
+alias fd="fd -I"
+#alias ov="vim $(fd -I | fzf)"
 alias ll="ls -lah"
 alias py="python3"
 alias sp='source ~/.profile'
 alias sa='source ~/.config/alias/bashalias;'
+alias sz='source ~/.zshrc'
 #alias v='nvim $(fzf --height 40%)'
 alias mkt='cd $(mktemp -d)'
 alias wipe=' wipe'
 
 #vifm cd to last directory
-alias vf='cd "$(/usr/bin/vifm --choose-dir - $@)"'
-alias f='cd "$(/usr/bin/vifm --choose-dir - $@)"'
-alias vifm='cd "$(/usr/bin/vifm --choose-dir - $@)"'
+alias vf='cd "$(/usr/bin/vifm $@)"'
+alias f='cd "$(/usr/bin/vifm $@)"'
+alias vifm='cd "$(/usr/bin/vifm $@)"'
 # make new directory and switch to it
 alias ms="mkdir $2 && cd $2"
 
+alias e="e -c"
 alias ipas="ip addr show"
 alias sip="ip addr show"
 alias mv="mv -v"
@@ -52,6 +56,7 @@ alias bl='echo 1 >| /sys/class/backlight/intel_backlight/brightness'
 c() {
   case $1 in
   a)              $EDITOR ~/.config/alias/bashalias ;;
+  al)             $EDITOR ~/.config/alacritty/alacritty.yml;;
   b)              $EDITOR ~/.bashrc ;;
   bp)             $EDITOR ~/.bash_profile ;;
   def)            $EDITOR ~/.config/mimeapps.list ;;
