@@ -22,12 +22,14 @@ Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'baeuml/summerfruit256.vim'
+Plug 'gu-fan/InstantRst'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } "on demand loading
 Plug 'rust-lang/rust.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'chase/vim-ansible-yaml', { 'for': 'yaml' }
+Plug 'tkztmk/vim-vala'
 
 "maybe interesting plugins
 """ Using a non-master branch
@@ -68,7 +70,7 @@ map <F5> 1z=
 set clipboard+=unnamedplus
 
 " leave system clipboard unchanged upon closing vim
-"autocmd VimLeave * call system("xsel -ib", getreg('+'))
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 " syntax highlighting for odd filetypes
 autocmd BufNewFile,BufRead *.cl set syntax=c
@@ -85,7 +87,6 @@ let NERDTreeDirArrows = 1
 
 map <C-n> :NERDTreeToggle<CR>
 nmap <silent> cp "_ciw<C-R>+<Esc>
-map <C-b> :YcmCompleter GoTo<CR>
 map <F2> :w<cr>
 map <F3> :silent !make<cr>
 map <F4> :!make qemu<cr>
@@ -121,10 +122,6 @@ let g:gruvbox_hls_cursor= "orange"
 "colo gruvbox
 colo summerfruit256
 let g:seoul256_background = 256
-
-let g:ycm_warning_symbol = '**'
-let g:ycm_error_symbol = '->'
-let g:ycm_confirm_extra_conf = 0
 
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
